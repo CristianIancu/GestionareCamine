@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<link href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" rel="stylesheet" />
+  <title>Pagina principală</title>
+</head>
+<body>
+  <div id="map"></div>
+    <div class = "overlay">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="dropdown">
+		<button class="btn"><i class="fa fa-bars"></i></button>
+		<div class="dropdown-content">
+			<a href="#">Repartizare studenți</a>
+			<a href="#">Vizualizare listă studenți</a>
+			<a href="#">Deconectare</a>
+		</div>
+  </div>
+
+        
+    </div>
+
+
+<script>
+	// We’ll add a tile layer to add to our map, in this case it’s a OSM tile layer.
+	// Creating a tile layer usually involves setting the URL template for the tile images
+	var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+	  osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	  osm = L.tileLayer(osmUrl, {
+		maxZoom: 18,
+		attribution: osmAttrib
+	  });
+
+	// initialize the map on the "map" div with a given center and zoom
+	var map = L.map('map').setView([45.750970, 21.226200], 14).addLayer(osm);
+	var markerc13 = L.marker([45.748240, 21.239030]).addTo(map);
+	markerc13.bindPopup('<b>Cămin C13 <br> Număr locuri în cameră: 2<br>Dotări: Internet, Cablu TV, sală de lectură, maşină de spălat, uscător, bucătării, TV<br>Adresa: Aleea Studenţilor 13, Timişoara 300086, Timiş, România<br></b><div style="display:flex;"><img src="assets/c13.jpg" width="100" height="100"/><div><a href="#">Mai multe detalii despre cămin</a><br><img src="assets/star.png" alt="Star image"/> <img src="assets/star.png" alt="Star image"/> <img src="assets/star.png" alt="Star image" /> <img src="assets/star.png" alt="Star image"/></div></div>').openPopup();
+	var markerc16 = L.marker([45.744040, 21.242240]).addTo(map);
+	markerc16.bindPopup('<b>Cămin C16 <br> Număr locuri în cameră: 5<br>Dotări: Internet, Cablu TV, sală de lectură, maşină de spălat, uscător, bucătării<br>Adresa: Aleea Ripensia 16 Timişoara 300584 Timiş, România<br></b><div style="display:flex;"><img src="assets/c16.jpg" width="100" height="100"/><div><a href="#">Mai multe detalii despre cămin</a><br><img src="assets/star.png" alt="Star image"/> <img src="assets/star.png" alt="Star image"/> <img src="assets/star.png" alt="Star image" /> <img src="assets/star.png" alt="Star image"/></div></div>').openPopup();
+			  
+
+
+
+</script>
+</body>
+</html>
