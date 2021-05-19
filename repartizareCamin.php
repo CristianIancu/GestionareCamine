@@ -370,7 +370,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              margin-left: 100px;
+              margin-left: 0px;
               margin-top: 10px;
             }
 
@@ -482,7 +482,7 @@
         $adresa = mysqli_real_escape_string($link, $_REQUEST['adresa']);
         $localitate = mysqli_real_escape_string($link, $_REQUEST['localitate']);
         $judet = mysqli_real_escape_string($link, $_REQUEST['judet']);
-        $locuri_max = mysqli_real_escape_string($link, $_REQUEST['locuri_max']); 
+        $locuri_max = 15;//mysqli_real_escape_string($link, $_REQUEST['locuri_max']); 
         $gen=mysqli_real_escape_string($link, $_REQUEST['gen']);      
         $long=45.75009155273438;
         $lat=21.23913764953613;
@@ -571,8 +571,10 @@
       <p class='field'>
         <input id="gen" type="text"  name="gen"  autocomplete="false" placeholder="Barbati/Femei">
       </p>
-      <input type="submit" id="add" value ="ADAUGA CAMINUL" name="plus"/>
       
+      <div class="wrap">
+        <input class='button' type="submit" id="add" value ="ADAUGA CAMINUL" name="plus"/>
+      </div>
     </form>
 </div>
 
