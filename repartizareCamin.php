@@ -6,94 +6,461 @@
 	<script src="JS/repartizare.js"></script>
 	<title>Repartizare</title>
 	<style>
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+              img{
+              display: block;
+              margin: auto;
+              width: 100%;
+              height: auto;
+            }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+            #login-button{
+              cursor: pointer;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              padding: 30px;
+              margin: auto;
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background: rgba(3,3,3,.8);
+              overflow: hidden;
+              opacity: 0.4;
+              box-shadow: 10px 10px 30px #000;}
 
-    .dropdown-content a {
-      color: black;
-      padding: 12px 19px;
-      text-decoration: none;
-      display: block;
-    }
+            /* Login container */
+            .container{
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              width: 500px;
+              height: 350px;
+              border-radius: 5px;
+              background: rgba(3,3,3,0.63);
+              box-shadow: 1px 1px 50px #000;
+              display: block;
+            }
 
-    .dropdown-content a:hover {background-color: #ddd;}
+            /* Heading */
+            h1{
+              font-family: 'Open Sans Condensed', sans-serif;
+              position: relative;
+              margin-top: 0px;
+              text-align: center;
+              font-size: 40px;
+              color: #ddd;
+              text-shadow: 3px 3px 10px #000;
+            }
 
-    .dropdown:hover .dropdown-content {display: block;}
+            /* Inputs */
+            a,
+            input{
+              font-family: 'Open Sans Condensed', sans-serif;
+              text-decoration: none;
+              position: relative;
+              width: 80%;
+              display: block;
+              margin: 7px auto;
+              font-size: 17px;
+              color: #fff;
+              padding: 8px;
+              border-radius: 6px;
+              border: none;
+              background: rgba(3,3,3,.1);
+              -webkit-transition: all 2s ease-in-out;
+              -moz-transition: all 2s ease-in-out;
+              -o-transition: all 2s ease-in-out;
+              transition: all 0.2s ease-in-out;
+            }
 
-    .dropdown:hover .btn {background-color: #F6DBA2;}
+            input:focus{
+              outline: none;
+              box-shadow: 3px 3px 10px #333;
+              background: rgba(3,3,3,.18);
+            }
 
-    .btn {
-      background-color: #A07855FF;
-      border: none;
-      color: black;
-      padding: 12px 43px;
-      font-size: 20px;
-      cursor: pointer;
-      margin-left:10px;
-      border-radius:7px;
-    }
+            /* Placeholders */
+            ::-webkit-input-placeholder {
+              color: #ddd;  }
+            :-moz-placeholder { /* Firefox 18- */
+              color: red;  }
+            ::-moz-placeholder {  /* Firefox 19+ */
+              color: red;  }
+            :-ms-input-placeholder {  
+              color: #333;  }
 
-    .button-file1 {
-      position: absolute;
-      left: 550px;
-      top: 150px;
-      width: 250px;
-      display:block;
-    }
-    .button-file2 {
-      position: absolute;
-      left: 550px;
-      top: 200px;
-      width: 135px;
-      height: 30px;
-    }
-    table {
-      position:absolute;
-      left: 165px;
-      top: 270px;
-      border-collapse: collapse;
-      border-spacing: 0;
-      width: 80%;
-      border: 1px solid #ddd;
-      display:none;
-      
-    }
+            /* Link */
+            a{
+              font-family: 'Open Sans Condensed', sans-serif;
+              text-align: center;
+              padding: 4px 8px;
+              background: rgba(107,255,3,0.3);
+            }
 
-    th, td {
-      text-align: left;
-      padding: 23px;
-    }
-
-    tr:nth-child(even){background-color: #f2f2f2}
-
-
-    .form {
-      position:absolute;
-      left: 430px;
-      top: 280px;
-      width: 300px;
-      height: 250px;
-      padding: 50px;
-      border-radius: 1.5em; 
-      box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-      display:block;
-      
-    }
+            a:hover{
+              opacity: 0.7;
+            }
 
 
+            .form{
+              max-width: 40em;
+              margin: 0 auto;
+              position: relative;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: space-between;
+              align-items: flex-end;
+            }
+            .form .field {
+              width: 100%;
+              margin: 0 0 0 0;
+            }
+            @media screen and (min-width: 40em) {
+              .form .field.half {
+                width: calc(50% - 1px);
+              }
+              .form .field.third {
+                width: calc(33% - 1px);
+              }
+            }
+            .orange-btn{
+              background: rgba(87,198,255,.5);
+            }
+            #map {
+              width: 100%; height: 100%; 
+              -webkit-opacity: 0.7;
+              -moz-opacity: 0.7;
+              -o-opacity: 0.7;
+              -ms-opacity: 0.7;
+              opacity: 0.7;
+              filter: grayscale(85%);
+              position:fixed;
 
-  </style>
+            }
+
+            .overlay {     
+              width: 100px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;      
+              background-color: rgba(255, 255, 255, 0.1);    
+            }
+
+
+
+            a,
+            a:hover,
+            a:focus {
+                color: inherit;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+
+            .btn.btn-primary {
+              background: #866ec7;
+              border-color: #866ec7;
+              border-radius: 50%;
+              width:40px;
+              height:40px;  
+            }
+            .btn.btn-primary:hover, .btn.btn-primary:focus {
+              background: #866ec7 !important;
+                border-color: #866ec7 !important; 
+            }
+
+
+            .wrapper {
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+            }
+
+
+
+            #sidebar {
+                min-width: 250px;
+                max-width: 250px;
+                background: #866ec7;
+                color: #fff;
+                transition: all 0.3s;
+            }
+
+            #sidebar.active {
+                margin-left: -250px;
+            }
+
+
+            #sidebar ul.components {
+                padding: 5px 10px;
+                
+            }
+
+            #sidebar ul p {
+                color: #fff;
+                padding: 10px;
+            }
+
+            #sidebar ul li a {
+                padding: 10px;
+                font-size: 1.1em;
+                display: block;
+            }
+
+            #sidebar ul li a:hover {
+                color: #7386D5;
+            }
+
+            .navbar{
+              background-color:#3b5998;
+              overflow:hidden;
+              height:63px;
+            }
+
+            .navbar a{
+              float:left;
+              display:block;
+              color:#f2f2f2;
+              text-align:center;
+              padding:14px 16px;
+              text-decoration:none;
+              font-size:17px;
+            }
+
+            .navbar ul{
+              margin:8px 0 0 0;
+              list-style:none;
+            }
+
+            .navbar a:hover{
+              background-color:#ddd;
+              color:#000;
+            }
+
+            .side-nav{
+              height:100%;
+              width:0;
+              position:fixed;
+              z-index:1;
+              top:0;
+              left:0;
+              background-color:#111;
+              opacity:0.9;
+              overflow-x:hidden;
+              padding-top:60px;
+              transition:0.5s;
+            }
+
+            .side-nav a{
+              padding:10px 10px 10px 30px;
+              text-decoration:none;
+              font-size:22px;
+              color:#ccc;
+              display:block;
+              transition:0.3s;
+            }
+
+            .side-nav a:hover{
+              color:#fff;
+            }
+
+
+
+
+            a[data-toggle="collapse"] {
+                position: relative;
+            }
+
+            ul.CTAs {
+                padding: 20px;
+            }
+
+            ul.CTAs a {
+                text-align: center;
+                font-size: 0.9em !important;
+                display: block;
+                border-radius: 5px;
+                margin-bottom: 5px;
+            }
+
+            /* ---------------------------------------------------
+                CONTENT STYLE
+            ----------------------------------------------------- */
+
+            #content {
+                width: 100%;
+                padding: 20px;
+                min-height: 100vh;
+                transition: all 0.3s;
+            }
+
+            .button-file1 {
+              position: absolute;
+              left: 550px;
+              top: 150px;
+              width: 250px;
+              display:block;
+            }
+            .button-file2 {
+              position: absolute;
+              left: 550px;
+              top: 200px;
+              width: 135px;
+              height: 30px;
+            }
+            table {
+              position:absolute;
+              left: 165px;
+              top: 270px;
+              border-collapse: collapse;
+              border-spacing: 0;
+              width: 80%;
+              border: 1px solid #ddd;
+              display:none;
+              
+            }
+
+            th, td {
+              text-align: left;
+              padding: 23px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+
+
+
+            @media(max-width:568px){
+              .navbar-nav{display:none}
+            }
+
+            @media(min-width:568px){
+              .open-slide{display:none}
+            }
+
+            .upload-btn-wrapper {
+              margin-top: 10px;
+              margin-left: 0px;
+              overflow: hidden;
+              display: inline-block;
+            }
+
+            .btn {
+              border: 2px solid gray;
+              color: white;
+              background-color: rgba(3,3,3,0.60);
+              padding: 8px 20px;
+              border-radius: 8px;
+              font-size: 20px;
+              font-weight: bold;
+            }
+
+            .upload-btn-wrapper input[type=file] {
+              font-size: 100px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 0;
+            }
+            .wrap {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 100px;
+              margin-top: 10px;
+            }
+
+            .button {
+              width: 300px;
+              height: 45px;
+              font-family: 'Roboto', sans-serif;
+              font-size: 11px;
+              text-transform: uppercase;
+              letter-spacing: 2.5px;
+              font-weight: 500;
+              color: #000;
+              background-color: #fff;
+              border: none;
+              border-radius: 45px;
+              box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+              transition: all 0.3s ease 0s;
+              cursor: pointer;
+              outline: none;
+              }
+
+            .button:hover {
+              background-color: #B7E1D5;
+              box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+              color: #fff;
+              transform: translateY(-7px);
+            }
+
+          </style>
+          <script type="text/javascript">
+              function showHideRow(row) {
+                  $("#" + row).toggle();
+              }
+          </script>
+        
+          <style>
+              body {
+                  margin: 0 auto;
+                  padding: 0px;
+                  text-align: center;
+                  width: 100%;
+                  font-family: "Myriad Pro", 
+                      "Helvetica Neue", Helvetica, 
+                      Arial, Sans-Serif;
+              background-image:url("assets/images/background.jpg");
+              background-repeat:no-repeat;
+              background-size:100% 100%;
+              }
+        
+              #wrapper {
+                  margin: 0 auto;
+                  padding: 0px;
+                  text-align: center;
+                  width: 995px;
+              }
+        
+              #wrapper h1 {
+                  margin-top: 50px;
+                  font-size: 45px;
+                  color: #585858;
+              }
+        
+              #wrapper h1 p {
+                  font-size: 20px;
+              }
+        
+              .table_detail {
+                  width: 500px;
+                  text-align: left;
+                  border-collapse: collapse;
+                  color: #2E2E2E;
+                  border: #A4A4A4;
+              }
+        
+              .table_detail tr:hover {
+                  background-color: #F2F2F2;
+              }
+        
+              .table_detail .hidden_row {
+                  display: none;
+              }
+          .overlay_afisare {     
+          width: 900px;
+          position: absolute;
+          top: 100px;
+          left: 190px;
+          bottom: 30px;      
+          background-color: rgba(255, 255, 255, 0.1);    
+        }
+    </style>
 <?php
     /* Attempt MySQL server connection. Assuming you are running MySQL
     server with default setting (user 'root' with no password) */
@@ -186,19 +553,28 @@
 		</div>
 </div>
 
-<form action="repartizareCamin.php" method="post">
-  <div class="form" id="form" >
-    <div>Nume: <input id="fname" type="text"  name="camin_nume" /></div><br>
-    <div>Adresa: <input id="lname" type="text" name="adresa" /></div><br>
-    <div>Localitate: <input id="faculty" type="text"  name="localitate" /></div><br>
-    <div>Judet: <input id="specialization" type="text"  name="judet" /></div><br>
-    <div>Locuri totale: <input id="average" type="text"  name="locuri_max" /><br>
-    <div>Gen: <input id="gen" type="text"  name="gen" /></div><br><br>
+<div class="container" id='form' >
+    <form action="repartizareCamin.php" method="post">
 
-    <input id="send"  type="submit"  value ="Adăugare studenți" onclick="myFunction();" />
-    <input type="submit" id="add" value ="+" name="plus"/>
-  </div> 
-</post>
+      <p class='field'>
+        <input id="fname" type="text"  name="camin_nume" autocomplete="false" placeholder="Numele caminului">
+      </p>
+      <p class='field'>
+        <input id="lname" type="text" name="adresa" autocomplete="false" placeholder="Adresa">
+      </p>
+      <p class='field'>
+        <input id="faculty" type="text"  name="localitate" autocomplete="false" placeholder="Localitatea">
+      </p>
+      <p class='field'>
+        <input id="specialization" type="text"  name="judet" autocomplete="false" placeholder="Judet">
+      </p>
+      <p class='field'>
+        <input id="gen" type="text"  name="gen"  autocomplete="false" placeholder="Barbati/Femei">
+      </p>
+      <input type="submit" id="add" value ="ADAUGA CAMINUL" name="plus"/>
+      
+    </form>
+</div>
 
 </body>
 </html>

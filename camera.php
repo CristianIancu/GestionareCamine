@@ -18,19 +18,19 @@ $db_handle = new DBController();
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="css/home.css">
 
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
 
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="css/lightbox.css">
 
     </head>
     
-    <body style="background:url(assets/images/background.jpg);background-repeat:no-repeat;background-size:100% 100%">
+    <body style="background:url(images/background.jpg);background-repeat:no-repeat;background-size:100% 100%">
     
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -133,11 +133,11 @@ $db_handle = new DBController();
                </svg>
                
             </div>
-            <img src="assets/images/rooms.jpg" class="increase-imagemap-image" id="increase-imagemap-image">
+            <img src="assets/rooms.jpg" class="increase-imagemap-image" id="increase-imagemap-image">
                              
             <!---<div class="bg"></div>--->
              </div>	
-              <!--<img src="assets/images/rooms.jpg" alt="poza_camere" width="90%" height="90%"/>-->
+              <!--<img src="assets/rooms.jpg" alt="poza_camere" width="90%" height="90%"/>-->
       </div>
       </div>
 	
@@ -166,24 +166,24 @@ $db_handle = new DBController();
   
 
   <!-- jQuery -->
-  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="js/jquery-2.1.0.min.js"></script>
 
   <!-- Bootstrap -->
-  <script src="assets/js/popper.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Plugins -->
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/scrollreveal.min.js"></script>
-  <script src="assets/js/waypoints.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/imgfix.min.js"></script> 
-  <script src="assets/js/slick.js"></script> 
-  <script src="assets/js/lightbox.js"></script> 
-  <script src="assets/js/isotope.js"></script> 
+  <script src="js/owl-carousel.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imgfix.min.js"></script> 
+  <script src="js/slick.js"></script> 
+  <script src="js/lightbox.js"></script> 
+  <script src="js/isotope.js"></script> 
   
   <!-- Global Init -->
-  <script src="assets/js/custom.js"></script>
+  <script src="js/custom.js"></script>
 
   <script>
     function myFunction() {

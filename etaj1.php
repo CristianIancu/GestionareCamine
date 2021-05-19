@@ -21,11 +21,11 @@
     
     <!-- Additional CSS Files -->
 	
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-    <link href="assets/css/home.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link href="css/home.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<?php
 	if(isset($_POST['data1']))
@@ -35,7 +35,7 @@
 	?>
     </head>
     
-    <body style="background:url(assets/images/background.jpg);background-repeat:no-repeat;background-size:100% 100%">
+    <body style="background:url(images/background.jpg);background-repeat:no-repeat;background-size:100% 100%">
     
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -95,11 +95,11 @@
                </svg>
                <!--331,972 480,936 487,939 578,918 578,913 718,880 744,890 758,888 758,883 893,851 901,854 914,851 914,840 965,827 965,822 1093,792 1099,794 1112,792 1112,766 1197,746 1205,749 1217,746 1257,731 1342,759 1493,724 1494,640 1343,676 1343,676 1267,650 1219,666 1206,669 1198,664 1114,684 713,711 1100,713 1093,709 966,739 966,746 900,762 893,759 758,791 758,796 743,799 718,788 578,822 578,828 485,849 479,846 328,881 328,888 311,392 190,834 190,824 117,788 120,876 192,911 193,922 310,980 331,977-->
             </div>
-            <img src="assets/images/cladire.png" class="increase-imagemap-image" id="increase-imagemap-image">
+            <img src="assets/cladire.png" class="increase-imagemap-image" id="increase-imagemap-image">
                              
             <!---<div class="bg"></div>--->
              </div>	
-              <!--<img src="assets/images/cladire.png" alt="camin" width="900px" height="50px"/>-->
+              <!--<img src="images/cladire.png" alt="camin" width="900px" height="50px"/>-->
          </div>
 	</div>
 	
@@ -117,24 +117,24 @@
 	
 	
   <!-- jQuery -->
-  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="js/jquery-2.1.0.min.js"></script>
 
   <!-- Bootstrap -->
-  <script src="assets/js/popper.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Plugins -->
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/scrollreveal.min.js"></script>
-  <script src="assets/js/waypoints.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/imgfix.min.js"></script> 
-  <script src="assets/js/slick.js"></script> 
-  <script src="assets/js/lightbox.js"></script> 
-  <script src="assets/js/isotope.js"></script> 
+  <script src="js/owl-carousel.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imgfix.min.js"></script> 
+  <script src="js/slick.js"></script> 
+  <script src="js/lightbox.js"></script> 
+  <script src="js/isotope.js"></script> 
   
   <!-- Global Init -->
-  <script src="assets/js/custom.js"></script>
+  <script src="js/custom.js"></script>
 
   <script>
     
