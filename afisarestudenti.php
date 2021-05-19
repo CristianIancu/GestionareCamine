@@ -113,12 +113,12 @@ require_once ('component_tabel.php');
 				
             </tr>
             <?php
-				$student_array = $db_handle->runQuery("SELECT date_generale.Nume,date_generale.Prenume,date_generale.Universitate,date_generale.Facultate,date_generale.Specializare,date_generale.Medie,date_personale.CNP,date_personale.NrMatricol,date_personale.Serie,date_personale.sex,contact.Adresa,contact.Localitate,contact.Judet,contact.Tara,contact.Telefon,contact.Email FROM date_generale inner join date_personale on date_personale.ID_Student=date_generale.ID_Student inner join contact on date_generale.ID_Student=contact.ID_Student ");
+				$student_array = $db_handle->runQuery("SELECT date_generale.Nume,date_generale.Prenume,date_generale.Universitate,date_generale.Facultate,date_generale.Specializare,date_generale.Medie,date_personale.CNP,date_personale.Nr_Matricol,date_personale.Serie,date_personale.Gen,contact.Adresa,contact.Localitate,contact.Judet,contact.Tara,contact.Telefon,contact.Email FROM date_generale inner join date_personale on date_personale.ID_Student=date_generale.ID_Student inner join contact on date_generale.ID_Student=contact.ID_Student ");
 				//print_r($student_array);
 				if (!empty($student_array)) { 
 					foreach($student_array as $key=>$value){
 	                             $cheie=$key+1;
-	                             component_tabel($student_array[$key]["Nume"],$student_array[$key]["Prenume"],$student_array[$key]["Universitate"],$student_array[$key]["Facultate"],$student_array[$key]["Specializare"],$student_array[$key]["Medie"],$student_array[$key]["CNP"],$student_array[$key]["NrMatricol"],$student_array[$key]["Serie"],$student_array[$key]["sex"],$student_array[$key]["Adresa"],$student_array[$key]["Localitate"],$student_array[$key]["Judet"],$student_array[$key]["Tara"],$student_array[$key]["Email"],$student_array[$key]["Telefon"],$cheie);
+	                             component_tabel($student_array[$key]["Nume"],$student_array[$key]["Prenume"],$student_array[$key]["Universitate"],$student_array[$key]["Facultate"],$student_array[$key]["Specializare"],$student_array[$key]["Medie"],$student_array[$key]["CNP"],$student_array[$key]["Nr_Matricol"],$student_array[$key]["Serie"],$student_array[$key]["Gen"],$student_array[$key]["Adresa"],$student_array[$key]["Localitate"],$student_array[$key]["Judet"],$student_array[$key]["Tara"],$student_array[$key]["Email"],$student_array[$key]["Telefon"],$cheie);
 	  
 				}
 					}

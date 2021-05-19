@@ -1,7 +1,7 @@
 <?php
 
 
-function component_tabel($nume, $prenume, $universitate,$facultate,$specializare,$medie,$cnp,$nr_matricol,$serie,$sex,$adresa,$localitate,$judet,$tara,$email,$tel,$cheie){
+function component_tabel($nume, $prenume, $universitate,$facultate,$specializare,$medie,$cnp,$nr_matricol,$serie,$Gen,$adresa,$localitate,$judet,$tara,$email,$tel,$cheie){
     $element = "
 	<tr onclick=\"showHideRow('hidden_row$cheie');\">
                 <td>$nume</td>
@@ -17,7 +17,7 @@ function component_tabel($nume, $prenume, $universitate,$facultate,$specializare
 			
             <tr id=\"hidden_row$cheie\" class=\"hidden_row\">
                 <td>$serie</td>
-				<td>$sex</td>
+				<td>$Gen</td>
                 <td>$adresa</td>
                 <td>$localitate</td>
                 <td>$judet</td>
