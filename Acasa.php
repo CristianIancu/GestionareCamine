@@ -2,7 +2,6 @@
 session_start();
 require_once("PHP/dbcontroller.php");
 $db_handle = new DBController();
-
 // We need to use sessions, so you should always start sessions using the below code.
 
 // If the user is not logged in redirect to the login page...
@@ -10,9 +9,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: Autentificare.php');
 	exit;
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +75,6 @@ if (!isset($_SESSION['loggedin'])) {
 				<br></br>
                 <li>
                     <a href="logout.php">Deconectare</a>
-                    <a href="#">Deconectare</a>
                 </li>
             </ul>
         </div>
