@@ -24,6 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <script src="http://leafletjs.com/reference-1.3.0.html#tooltip"></script>
+  <script src="variabile.js"></script>
 <link href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" rel="stylesheet" />
 <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -35,7 +36,7 @@ if (!isset($_SESSION['loggedin'])) {
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="CSS/style.css">
 
 </head>
 <body>
@@ -46,6 +47,8 @@ if (!isset($_SESSION['loggedin'])) {
             <div></div>
         </div>
     </div>  
+	<!--<nav class="navbar">
+  </nav>-->
   <div id="map1"></div>
     <div class = "overlay">
 	<div class="wrapper">
@@ -75,6 +78,7 @@ if (!isset($_SESSION['loggedin'])) {
 				<br></br>
                 <li>
                     <a href="logout.php">Deconectare</a>
+                    <a href="#">Deconectare</a>
                 </li>
             </ul>
         </div>
@@ -101,7 +105,7 @@ if (!isset($_SESSION['loggedin'])) {
 		attribution: osmAttrib
 	  });
 	// initialize the map on the "map" div with a given center and zoom
-	var map = L.map('map1').setView([45.750970, 21.226200], 12).addLayer(osm);
+	var map = L.map('map1').setView([45.750970, 21.226200], 14).addLayer(osm);
 	//var polyline = L.polyline([[45.749845004356374, 21.24007183846195],[45.749845004356374, 21.24007183846195]]).addTo(this.map1);
     //polyline.bindTooltip("tool tip is bound");
 	/*var marker=L.marker([45.74998855590820, 21.24242973327637]).addTo(map);
@@ -119,6 +123,7 @@ if (!isset($_SESSION['loggedin'])) {
 	
     <?php
 				$camine_array = $db_handle->runQuery("SELECT * FROM CAMIN ");
+				$camin=-1;
 				if (!empty($camine_array)) { 
 					foreach($camine_array as $key=>$value){
 	?>
@@ -131,28 +136,17 @@ if (!isset($_SESSION['loggedin'])) {
             this.closePopup();
         });
 	marker.on('click',function onMapClick(e) {
-		  <?php
-		     $_SESSION['ID_CAAMIN']=$camine_array[$key]["ID_Camin"];
-		  ?>
-		  var id=<?php echo json_encode($_SESSION['ID_CAAMIN']); ?>;
+		  var id=<?php echo json_encode($camine_array[$key]["ID_Camin"]);  ?>;
+		 
 		  
-		  //alert(id);
-		  //alert(s);
 		  if(id > 0)
 		  {
-			  window.location="etaj1.php";
+			  sessionStorage.setItem("caminid", id);
+			  window.location="VizualizareCamine.php?camin="+id;
 		  }
-		  /*$_SESSION['ID'].on("change", function (id) {
-          $.ajax({
-		  method: "POST",
-		  url: "etaj1.php",
-		  data: { sessionvalue: this.value }
-		  });
 		  
-        });*/
-			  //window.location="etaj1.php";
-		   
-          
+                
+            
 		  
     });
 	
@@ -161,12 +155,10 @@ if (!isset($_SESSION['loggedin'])) {
 					}
 	?>	  
 
-
-
-
-
 </script>
 
+	
+	
 <script>
 $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
@@ -194,5 +186,7 @@ $(document).ready(function () {
     
     <!-- Global Init -->
     <script src="js/custom.js"></script>
+	
+	
 </body>
 </html>
