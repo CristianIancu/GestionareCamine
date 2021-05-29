@@ -901,4 +901,19 @@ abbr[data-original-title] {
 	margin-left: 800px;
 }
 
+#test2 text {
+  background: red;
+  border-radius: 5px;
+  border: 2px solid blue;
+  padding: 5px
+}
+
+#test2 text:nth-of-type(2) {
+  background: orange;
+  border-color: red
+}
+
+#test2 g text {
+  border-width: 4px
+}
     
