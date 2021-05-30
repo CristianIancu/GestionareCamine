@@ -185,30 +185,30 @@
 		 
 	</div>
 	   
-	    <?php
+	   
+							
+	<?php
 							
 							if(isset($_GET['idcamin']))
 							  {	  
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+1,$_GET['idcamin']);
-							  
-								   while ($row = mysqli_fetch_assoc($result))
-									{
+									//foreach($result as $value)
+										//print_r($value);
 										//echo $row['Studenti'];
-										if($row['Studenti']!= null)
+										if($result!= null)
 										{
-										componentcamera($_GET['etaj']*10+1,$row['Studenti'], $row['Locuri_max']);
+											componentcamera($_GET['etaj']*10+1,$result, 4);
 										}
 										else
 										{
 											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
-											while ($row = mysqli_fetch_assoc($result))
-											{
-												componentcamera($_GET['etaj']*10+1,0, $row['Locuri_max']);
-											}
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
 										}
-									}
+									
 							     
 							   }
 							   
@@ -217,6 +217,7 @@
 							  
 							
 		?>
+	
 		<?php
 							
 							if(isset($_GET['idcamin']))
@@ -224,27 +225,27 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+2,$_GET['idcamin']);
-							   
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera2($_GET['etaj']*10+2,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+2,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera2($_GET['etaj']*10+2,0, $row['Locuri_max']);
+											componentcamera2($_GET['etaj']*10+2,$result, 4);
 										}
-									}
-								}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+2,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
 							   
-							  
 							  }
+							 
+							  
 							
 		?>
 		
@@ -255,63 +256,58 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+3,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera3($_GET['etaj']*10+3,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+3,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera3($_GET['etaj']*10+3,0, $row['Locuri_max']);
+											componentcamera3($_GET['etaj']*10+3,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								 //  componentcamera3($_GET['etaj']*10+3,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
+							 
+							  
 							
 		?>
 		
 		<?php
-							
 							if(isset($_GET['idcamin']))
 							  {	  
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+4,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera4($_GET['etaj']*10+4,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+4,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera4($_GET['etaj']*10+4,0, $row['Locuri_max']);
+											componentcamera4($_GET['etaj']*10+4,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								 //  componentcamera4($_GET['etaj']*10+4,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
-							
+							 
+							  
+												
 		?>
 		
 		
@@ -322,31 +318,28 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+5,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera5($_GET['etaj']*10+5,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+5,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera5($_GET['etaj']*10+5,0, $row['Locuri_max']);
+											componentcamera5($_GET['etaj']*10+5,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								 //  componentcamera5($_GET['etaj']*10+5,0, 0);
-							   //}
-							  
-							   
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
+							 
+							  
+							
 							
 		?>
 		<?php
@@ -356,30 +349,27 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+6,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null)
-							   //{
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera6($_GET['etaj']*10+6,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+2,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera6($_GET['etaj']*10+6,0, $row['Locuri_max']);
+											componentcamera6($_GET['etaj']*10+6,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								 //  componentcamera6($_GET['etaj']*10+6,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
+							 
+							  
 							
 		?>
 	    <?php
@@ -389,28 +379,27 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+7,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera7($_GET['etaj']*10+7,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+7,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera7($_GET['etaj']*10+7,0, $row['Locuri_max']);
+											componentcamera7($_GET['etaj']*10+7,$result, 4);
 										}
-									}
-								}
-							   //}else{
-								 //  componentcamera7($_GET['etaj']*10+7,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
+							 
+							  
 							
 		?>
 		
@@ -421,30 +410,27 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+8,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera8($_GET['etaj']*10+8,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+8,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera8($_GET['etaj']*10+8,0, $row['Locuri_max']);
+											componentcamera8($_GET['etaj']*10+8,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								 //  componentcamera8($_GET['etaj']*10+8,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
 							   
 							  }
+							 
+							  
 							
 		?>
 		
@@ -455,30 +441,28 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+9,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera9($_GET['etaj']*10+9,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+9,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera9($_GET['etaj']*10+9,0, $row['Locuri_max']);
+											componentcamera9($_GET['etaj']*10+9,$result, 4);
 										}
-									}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
-							   //}
-							   //else
-							   //{
-								 //  componentcamera9($_GET['etaj']*10+9,0,0);
-							   //}
-							   }
+							   
 							  }
+							 
+							  
+							
 							
 		?>
 		
@@ -489,29 +473,28 @@
 							   //$etaj*10+1
 							   if(isset($_GET['etaj'])){
 							   $result = $database->getDataCamera($_GET['etaj']*10+10,$_GET['idcamin']);
-							   //if(mysqli_fetch_assoc($result)!=null){
-							   while ($row = mysqli_fetch_assoc($result))
-								{
-									//echo $row['Studenti'];
-									if($row['Studenti']!= null)
-									{
-									componentcamera10($_GET['etaj']*10+10,$row['Studenti'], $row['Locuri_max']);
-									}
-									else
-									{
-										$result = $database->getDataLocuriMaxime($_GET['etaj']*10+10,$_GET['idcamin']);
-										while ($row = mysqli_fetch_assoc($result))
+									//foreach($result as $value)
+										//print_r($value);
+										//echo $row['Studenti'];
+										if($result!= null)
 										{
-											componentcamera10($_GET['etaj']*10+10,0, $row['Locuri_max']);
+											componentcamera10($_GET['etaj']*10+10,$result, 4);
 										}
-									}
-								}
-							   //}
-							   //else{
-								   //componentcamera10($_GET['etaj']*10+10,0,0);
-							   //}
+										else
+										{
+											$result = $database->getDataLocuriMaxime($_GET['etaj']*10+1,$_GET['idcamin']);
+											
+												//componentcamera($_GET['etaj']*10+1,0, 4);
+											
+										}
+									
+							     
 							   }
+							   
 							  }
+							 
+							  
+							
 							
 		?>
 		
