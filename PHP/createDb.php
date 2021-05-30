@@ -83,10 +83,11 @@ class CreateDb
         }
     }
 	public function getDataCamera($nrcamera,$id){
-        $sql = "SELECT GROUP_CONCAT( CONCAT(CONCAT($this->tabledategenerale.Nume,' '),$this->tabledategenerale.Prenume) SEPARATOR ',') as 'Studenti',$this->tablename2.Locuri_max from $this->tabledatepersonale INNER JOIN $this->tabledategenerale ON $this->tabledatepersonale.ID_Student=$this->tabledategenerale.ID_Student INNER JOIN $this->tablename2 ON $this->tabledatepersonale.Nr_Camera=$this->tablename2.Nr_camera WHERE $this->tablename2.Nr_camera=$nrcamera AND $this->tablename2.ID_Camin=$id";
+        $id--;
         
+        //$sql = "SELECT GROUP_CONCAT( CONCAT(CONCAT($this->tabledategenerale.Nume,' '),$this->tabledategenerale.Prenume) SEPARATOR ',') as 'Studenti',$this->tablename2.Locuri_max from $this->tabledatepersonale INNER JOIN $this->tabledategenerale ON $this->tabledatepersonale.ID_Student=$this->tabledategenerale.ID_Student INNER JOIN $this->tablename2 ON $this->tabledatepersonale.Nr_Camera=$this->tablename2.Nr_camera WHERE $this->tablename2.Nr_camera=$nrcamera AND $this->tablename2.ID_Camin=$id ";
+        $sql = "SELECT Nume,Prenume FROM date_personale INNER JOIN date_generale on date_personale.ID_Student=date_generale.ID_Student WHERE Nr_camera=$nrcamera AND NR_Camin=$id";
         $result = mysqli_query($this->con, $sql);
-		 
         
         if(mysqli_num_rows($result) > 0){
             return $result;
