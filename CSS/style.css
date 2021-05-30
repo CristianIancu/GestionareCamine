@@ -1,5 +1,5 @@
 html { height: 100% }
-	  body { height: 100%; margin: 0; overflow:hidden; }
+	  body { height: 100%; margin: 0; overflow:hidden; text-align: center;}
 .container {
     position: relative;
     width: 500px;
@@ -35,7 +35,7 @@ html { height: 100% }
     border-radius: 50%;
     overflow: hidden;
 	margin-top:-27px;
-	margin-left: 1000px;
+	margin-left: 80%;
 }
 
 .overlay {     
@@ -139,10 +139,10 @@ a:focus {
   .overlay_afisare {     
 	  width: 900px;
 	  position: absolute;
-	  top: 100px;
-	  left: 250px;
-	  bottom: 30px;    
-	}
+	  top: 10%;
+	  left: 26%;
+	  bottom: 30px; 
+      }
   
 .section-heading h6 {
   font-size: 15px;
@@ -163,6 +163,7 @@ a:focus {
 banner
 --------------------------------------------- 
 */
+
 
 
 .container{
@@ -701,219 +702,152 @@ body.modal-open {
 	opacity: .6
 }
 
-abbr[title],
-abbr[data-original-title] {
-	text-decoration: underline;
-	text-decoration: underline dotted;
-	cursor: help;
-	border-bottom: 0
-}
+/* Upload file container */
+      #hide{
+         top: 10%;
+         display:block;
+      }
+      .container1{
+         position: relative;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin: auto;
+         width: 500px;
+         height: 130px;
+         border-radius: 5px;
+         background: rgba(3,3,3,0.63);
+         box-shadow: 1px 1px 50px #000;
+         display: block;
+      }
+      .container2{
+         position: relative;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin: auto;
+         width: 500px;
+         height: 500px;
+         border-radius: 5px;
+         background: rgba(3,3,3,0.63);
+         box-shadow: 1px 1px 50px #000;
+         display: block;
+      }
+      
+      /* Inputs */
+      input{
+      font-family: 'Open Sans Condensed', sans-serif;
+      text-decoration: none;
+      position: relative;
+      width: 95%;
+      display: block;
+      margin: 7px auto;
+      font-size: 17px;
+      color: #fff;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      background: rgba(3,3,3,.1);
+      -webkit-transition: all 2s ease-in-out;
+      -moz-transition: all 2s ease-in-out;
+      -o-transition: all 2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      }
+      input:focus{
+      outline: none;
+      box-shadow: 3px 3px 10px #333;
+      background: rgba(3,3,3,.18);
+      }
+      /* Placeholders */
+      ::-webkit-input-placeholder {
+      color: #ddd;  }
+      :-moz-placeholder { /* Firefox 18- */
+      color: red;  }
+      ::-moz-placeholder {  /* Firefox 19+ */
+      color: red;  }
+      :-ms-input-placeholder {  
+      color: #333;  }
+      /* Link */
+      .form{
+      max-width: 40em;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      }
+      .form .field {
+      width: 100%;
+      margin: 0 0 0 0;
+      }
+      @media screen and (min-width: 40em) {
+      .form .field.half {
+      width: calc(50% - 1px);
+      }
+      .form .field.third {
+      width: calc(33% - 1px);
+      }
+      }
+	  
+	  .upload-btn-wrapper {
+      margin-top: 10px;
+      margin-left: 0px;
+      overflow: hidden;
+      display: inline-block;
+      }
+      .btn-incarcare-fisier {
+      border: 2px solid gray;
+      color: white;
+      background-color: rgba(3,3,3,0.60);
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      }
+      .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      }
+      .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 100px;
+      margin-top: 10px;
+      }
+      .button-trimite {
+      width: 300px;
+      height: 45px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+      }
+      .button-trimite:hover {
+      background-color: #B7E1D5;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+      }
+      
+	  
+	  
+      
+      
 
-#login-button{
-              cursor: pointer;
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              padding: 30px;
-              margin: auto;
-              width: 100px;
-              height: 100px;
-              border-radius: 50%;
-			  opacity:0.4;
-              background: rgb(128,128,128);
-              overflow: hidden;
-              box-shadow: 10px 10px 30px #fff;}
-
-            /* Login container */
-            .container{
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              margin: auto;
-              width: 500px;
-              height: 400px;
-			  opacity:0.8;
-              border-radius: 5px;
-              background: rgb(128,128,128);
-              box-shadow: 1px 1px 50px #fff;
-              display: block;
-            }
-			
-			.auth{
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              margin: auto;
-              width: 350px;
-              height: 300px;
-			  opacity:0.8;
-              border-radius: 5px;
-              background: rgb(128,128,128);
-              box-shadow: 1px 1px 50px #fff;
-              display: block;
-            }
-
-            /* Heading */
-            h1{
-              font-family: 'Open Sans Condensed', sans-serif;
-              position: relative;
-              margin-top: 5px;
-              text-align: center;
-              font-size: 40px;
-              color: #ddd;
-              text-shadow: 3px 3px 10px #000;
-            }
-
-            /* Inputs */
-            
-            input{
-              font-family: 'Open Sans Condensed', sans-serif;
-              text-decoration: none;
-              position: relative;
-              width: 80%;
-              display: block;
-              margin: 7px auto;
-              font-size: 17px;
-              color: #fff;
-              padding: 8px;
-              border-radius: 6px;
-              border: none;
-              background: rgba(3,3,3,.1);
-              -webkit-transition: all 2s ease-in-out;
-              -moz-transition: all 2s ease-in-out;
-              -o-transition: all 2s ease-in-out;
-              transition: all 0.2s ease-in-out;
-            }
-
-
-            /* Placeholders */
-            ::-webkit-input-placeholder {
-              color: #ddd;  }
-            :-moz-placeholder { /* Firefox 18- */
-              color: red;  }
-            ::-moz-placeholder {  /* Firefox 19+ */
-              color: red;  }
-            :-ms-input-placeholder {  
-              color: #333;  }
-
-            /* Link */
-            
-
-
-            .form{
-              max-width: 40em;
-              margin: 0 auto;
-              position: relative;
-              display: flex;
-              flex-flow: row wrap;
-              justify-content: space-between;
-              align-items: flex-end;
-            }
-            .form .field {
-              width: 100%;
-              margin: 0 0 0 0;
-            }
-            @media screen and (min-width: 40em) {
-              .form .field.half {
-                width: calc(50% - 1px);
-              }
-              .form .field.third {
-                width: calc(33% - 1px);
-              }
-            }
-            .orange-btn{
-              background: rgba(87,198,255,.5);
-            }
- 
-            .upload-btn-wrapper {
-              margin-top: 10px;
-              margin-left: 0px;
-              overflow: hidden;
-              display: inline-block;
-            }
-            .upload-btn-wrapper input[type=file] {
-              font-size: 100px;
-              position: absolute;
-              left: 0;
-              top: 0;
-              opacity: 0;
-            }
-            .wrap {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-left: 0px;
-              margin-top: 10px;
-            }
-
-            .button {
-              width: 150px;
-              height: 45px;
-			  font-family:'Ubuntu', sans-serif;
-			  font-weight: bold;
-              font-size: 11px;
-              text-transform: uppercase;
-              letter-spacing: 2.5px;
-              font-weight: 500;
-              color: #000;
-              background-color: #fff;
-              border: none;
-              border-radius: 45px;
-              box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-              transition: all 0.3s ease 0s;
-              cursor: pointer;
-              outline: none;
-              }
-
-            .button:hover {
-              background-color: rgb(192,192,192);
-              box-shadow: 0px 15px 20px rgb(211,211,211);
-              color: #fff;
-              transform: translateY(-7px);
-            }
-			.navbar{
-				
-              background: rgb(220,220,220);
-			  
-  overflow:hidden;
-  height:63px;
-}
-.logo-image{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-	margin-top:-27px;
-	margin-left: 1000px;
-}
-
-.logo{
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-	margin-top:-9px;
-	margin-left: 800px;
-}
-
-#test2 text {
-  background: red;
-  border-radius: 5px;
-  border: 2px solid blue;
-  padding: 5px
-}
-
-#test2 text:nth-of-type(2) {
-  background: orange;
-  border-color: red
-}
-
-#test2 g text {
-  border-width: 4px
-}
-    
+	

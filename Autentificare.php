@@ -31,6 +31,30 @@ session_start();
         font-weight: bold;
         font-size: 23px;
     }
+	.button {
+      width: 300px;
+      height: 45px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+	  right:17%;
+      }
+	  .button:hover {
+      background-color: #B7E1D5;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+      }
 </style>
 <head>
 
@@ -45,6 +69,13 @@ session_start();
 
 <body>
 <div id="map"></div>
+<div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
 <div class="auth" id='form' >
 <p class="sign" align="center" >Autentificare</p>
     <form action="login.php" method="post" class="input" >
@@ -65,6 +96,25 @@ session_start();
     </form>
 </div>
 
+<!-- jQuery -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imgfix.min.js"></script> 
+    <script src="js/slick.js"></script> 
+    <script src="js/lightbox.js"></script> 
+    <script src="js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="js/custom.js"></script>
 <script>
 
 	
