@@ -109,6 +109,9 @@
 	 <div class="overlay_cladire">
         <div class="increase-imagemap">
 		<div class="increase-imagemap-shape-container">
+		<form method="POST" action="VizualizareCamine.php">
+			
+			   <input type="hidden" id="field2" name="value"><br><br>
 		   <svg class="incrase-hs-poly-svg" viewbox="0 0 1902 1088" preserveaspectratio="none">
 		   <?php
 			        if(isset($_GET['camin']))
@@ -116,7 +119,7 @@
 			   ?>
 			  <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=4">  <?php } ?>
 				 <polygon onmouseover="myFunction(5)" onmouseout="onMouseout(5)" class="increase-imagemap-shape increase-imagemap-shape-poly increase-imagemap-tooltip" title="Etaj 1" data-shape-title="Etaj 1" style=" opacity: 0; fill: #AF7EF1; fill-opacity: 0.5; stroke: #AF7EF1; stroke-width: 2; stroke-opacity: 0.8; stroke-linecap: round; stroke-location: outside" data-index="0" id="shape-13" 
-				 points="123 495,386 582,1489 376,1606 403,1789 360,1786 470,1603 513,1486 487,387 705,127 615" data-original-title="Etaj 5" data-index="0" data-shape-title="Etaj 5" data-tippy="" ></polygon>
+				 points="124 383,381 473,1488 264,1606 310,1789 275,1784 383,1606 418,1489 379,381 594,128 494" data-original-title="Etaj 5" data-index="0" data-shape-title="Etaj 5" data-tippy="" ></polygon>
 			  </a>
 			  <?php
 			        if(isset($_GET['camin']))
@@ -124,7 +127,7 @@
 			   ?>
 			  <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=3"> <?php } ?>
 				 <polygon onmouseover="myFunction2(4)" onmouseout="onMouseout2(4)" class="increase-imagemap-shape increase-imagemap-shape-poly increase-imagemap-tooltip" title="Etaj 1" data-shape-title="Etaj 1" style=" opacity: 0; fill: #AF7EF1; fill-opacity: 0.5; stroke: #AF7EF1; stroke-width: 2; stroke-opacity: 0.8; stroke-linecap: round; stroke-location: outside" data-index="0" id="shape-13" 
-				 points="130 654,387 735,1487 497,1603 527,1786 489,1783 570,1603 609,1487 583,386 826,132 753" ></polygon>
+				 points="128 475,387 566,1489 345,1606 380,1786 347,1783 470,1603 507,1486 476,387 706,133 614" ></polygon>
 			  </a>
 			  <?php
 			        if(isset($_GET['camin']))
@@ -132,7 +135,7 @@
 			   ?>
 			  <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=2"> <?php } ?>
 				 <polygon onmouseover="myFunction3(3)" onmouseout="onMouseout3(3)" class="increase-imagemap-shape increase-imagemap-shape-poly increase-imagemap-tooltip" title="Etaj 1" data-shape-title="Etaj 1" style=" opacity: 0; fill: #AF7EF1; fill-opacity: 0.5; stroke: #AF7EF1; stroke-width: 2; stroke-opacity: 0.8; stroke-linecap: round; stroke-location: outside" data-index="0" id="shape-13" 
-				 points="132 752,386 840,1487 597,1603 625,1786 585,1781 672,1603 712,1487 682,387 929,135 842" ></polygon>
+				 points="133 636,388 720,1485 486,1603 511,1783 471,1781 559,1603 599,1486 573,385 818,136 731" ></polygon>
 			  </a>
 			  <?php
 			        if(isset($_GET['camin']))
@@ -140,19 +143,19 @@
 			   ?>
 			  <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=1"> <?php } ?>
 				 <polygon onmouseover="myFunction4(2)" onmouseout="onMouseout4(2)" class="increase-imagemap-shape increase-imagemap-shape-poly increase-imagemap-tooltip" title="Etaj 1" data-shape-title="Etaj 1" style=" opacity: 0; fill: #AF7EF1; fill-opacity: 0.5; stroke: #AF7EF1; stroke-width: 2; stroke-opacity: 0.8; stroke-linecap: round; stroke-location: outside" data-index="0" id="shape-13" 
-				 points="136 859,388 946,1487 705,1602 737,1780 697,1778 766,1603 809,1487 779,388 1045,139 959" ></polygon>
+				 points="137 715,387 799,1487 557,1602 581,1782 541,1779 653,1603 695,1487 667,388 918,139 837" ></polygon>
 			  </a>
 			  <?php
 			        if(isset($_GET['camin']))
 							  {	  
 			   ?>
-			  <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=0"> <?php } ?>
+			   <a xlink:href="VizualizareCamere.php?idcamin=<?php echo $_GET['camin'] ?>&etaj=0"> <?php } ?>
 				 <polygon onmouseover="myFunction5(1)" onmouseout="onMouseout5(1)" class="increase-imagemap-shape increase-imagemap-shape-poly increase-imagemap-tooltip" title="Etaj 1" data-shape-title="Etaj 1" style=" opacity: 0; fill: #AF7EF1; fill-opacity: 0.5; stroke: #AF7EF1; stroke-width: 2; stroke-opacity: 0.8; stroke-linecap: round; stroke-location: outside" data-index="0" id="shape-13" 
-				 points="109 980,388 1064,1487 796,1603 826,1786 782,1786 870,1603 915,
-                  1487 885,-500 1260,109 1082" ></polygon>
+				 points="137 779,387 885,1487 635,1602 664,1778 622,1776 735,1603 779,1486 750,388 1018,141 908" ></polygon>
 			  </a>
+			 
 		   </svg>
-		   
+		   </form>
 		</div>
 		<img src="assets/cladire.png" class="increase-imagemap-image" id="increase-imagemap-image">
                      
