@@ -16,14 +16,14 @@ function component_tabel($nume, $prenume, $universitate,$facultate,$specializare
             </tr>
 			
             <tr id=\"hidden_row$cheie\" class=\"hidden_row\">
-                <td>$serie</td>
-				<td>$Gen</td>
-                <td>$adresa</td>
-                <td>$localitate</td>
-                <td>$judet</td>
-				<td>$tara</td>
-				<td>$email</td>
-				<td>$tel</td>
+                <td><b>Serie</b>: $serie</td>
+				<td><b>Gen:</b> $Gen</td>
+                <td><b>Adresa:</b> $adresa</td>
+                <td><b>Localitate:</b> $localitate</td>
+                <td><b>Județ:</b> $judet</td>
+				<td><b>Țara:</b> $tara</td>
+				<td><b>Email:</b> $email</td>
+				<td><b>Telefon:</b> $tel</td>
             </tr>
 	
 	

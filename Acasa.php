@@ -47,6 +47,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<!--<nav class="navbar">
   </nav>-->
   <div id="map1"></div>
+  
     <div class = "overlay">
 	<div class="wrapper">
         <!-- Sidebar  -->

@@ -25,6 +25,7 @@
 <link href="css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 	<script src="JS/repartizare.js"></script>
 	<title>Repartizare</title>
+<<<<<<< HEAD
   <?php
     require 'component_tabel.php';
   ?>
@@ -426,6 +427,14 @@
       position:absolute;
       left: 165px;
       top: 270px;
+=======
+	<style>
+	/*Tabelul de studenti*/
+      table {
+      position:absolute;
+      left: 26%;
+      top: 10%;
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
       border-collapse: collapse;
       border-spacing: 0;
       width: 80%;
@@ -443,6 +452,7 @@
       @media(min-width:568px){
       .open-slide{display:none}
       }
+<<<<<<< HEAD
       .upload-btn-wrapper {
       margin-top: 10px;
       margin-left: 0px;
@@ -523,12 +533,18 @@
       font-size: 20px;
       }
       .table_detail {
+=======
+      
+      
+      .table_detail-repartizare {
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
          position:absolute;
          text-align: left;
          border-collapse: collapse;
          color: #2E2E2E;
          border: #A4A4A4;
       }
+<<<<<<< HEAD
       .table_detail tr:hover {
       background-color: #F2F2F2;
       }
@@ -545,6 +561,33 @@
       }
 
    </style>
+=======
+      .table_detail-repartizare tr:hover {
+      background-color: #F2F2F2;
+      }
+      .table_detail-repartizare .hidden_row {
+      display: none;
+      }
+
+	</style>
+  <?php
+    require 'component_tabel.php';
+  ?>
+      <script>
+         function Upload() {
+           //alert("Tapa"); 
+           var formular = document.getElementById('hide');
+           var table = document.getElementById('display');
+           //print_r(formular);
+           table.style.display = "block";
+           formular.style.display = "none";
+         }
+         function showHideRow(row) {
+             $("#" + row).toggle();
+         }
+      </script>
+	
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
           <script type="text/javascript">
               function showHideRow(row) {
                   $("#" + row).toggle();
@@ -841,7 +884,18 @@
          ?>
    </head>
 <body>
+<<<<<<< HEAD
 <div id="map"></div>
+=======
+
+<div id="map"></div>
+
+<nav class="navbar">
+	<div class="logo-image">
+            <img src="assets/logo.png" class="img-fluid">
+      </div>
+  </nav>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
  <div class = "overlay">
         <div class="wrapper">
         <!-- Sidebar  -->
@@ -882,6 +936,7 @@
         </div>
 		</div>
 	</div>
+<<<<<<< HEAD
 
    <table>
          <tr>
@@ -889,6 +944,8 @@
             <th>Prenume</th>
          </tr>
       </table>
+=======
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
       <div id='hide'>
          <br>
          <br>
@@ -902,7 +959,11 @@
          <div class="container1" id='form' >
             <div class="upload-btn-wrapper">
                <form action="RepartizareStudenti.php" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
                   <button type="submit" name="submit1" class="btn">Upload a file</button>
+=======
+                  <button type="submit" name="submit1" class="btn-incarcare-fisier">Upload a file</button>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
                   <input id="input-file"  type="file" name="csv"/>
                   <input type="submit" name="submit1" value="Save"   />
                </form>
@@ -937,13 +998,22 @@
                <p class='field'><input type="text" autocomplete="false" name="hidden" placeholder="Media"></p>
                
                <div class="wrap">
+<<<<<<< HEAD
                   <input type="submit" name="submit2" id="myButton" class="button"></input>
+=======
+                  <input type="submit" name="submit2" id="myButton" class="button-trimite"></input>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
                </div>
             </form>
          </div>
       </div>
       
+<<<<<<< HEAD
          <table class="table_detail" id="display">
+=======
+         <table class="table_detail-repartizare" id="display" style="height: 700px;
+            overflow-y: scroll;">
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
            <tr>
              <th>Nume</th>
              <th>Prenume</th>
@@ -986,7 +1056,27 @@
             }
             ?>
          </table>
+<<<<<<< HEAD
 
+=======
+		 
+<!-- jQuery -->
+  <script src="js/jquery-2.1.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="js/owl-carousel.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imgfix.min.js"></script> 
+  <script src="js/slick.js"></script> 
+  <script src="js/lightbox.js"></script> 
+  <script src="js/isotope.js"></script>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
   <script>
 
 	

@@ -272,6 +272,21 @@
 </head>
 <body>
 <div id="map"></div>
+<<<<<<< HEAD
+=======
+<div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+<nav class="navbar">
+	<div class="logo-image">
+            <img src="assets/logo.png" class="img-fluid">
+      </div>
+  </nav>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
  <div class = "overlay">
         <div class="wrapper">
         <!-- Sidebar  -->
@@ -339,6 +354,28 @@
 	  
     </form>
 </div>
+<<<<<<< HEAD
+=======
+<!-- jQuery -->
+  <script src="js/jquery-2.1.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="js/owl-carousel.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/imgfix.min.js"></script> 
+  <script src="js/slick.js"></script> 
+  <script src="js/lightbox.js"></script> 
+  <script src="js/isotope.js"></script> 
+  
+  <!-- Global Init -->
+  <script src="js/custom.js"></script>
+>>>>>>> 90dc104b0990cef994146e26195914d53118bee8
 
   <script>
 
