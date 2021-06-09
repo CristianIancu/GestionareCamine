@@ -1,0 +1,112 @@
+<?php
+
+
+class CreateDb
+{
+        public $servername;
+        public $username;
+        public $password;
+        public $dbname;
+        public $tablename;
+		public $tablename2;
+		public $tabledatepersonale;
+		public $tabledategenerale;
+        public $con;
+
+
+        // class constructor
+    public function __construct(
+        $dbname = "project",
+        $tablename = "camin",
+		$tablename2="camera",
+		$tabledatepersonale="date_personale",
+		$tabledategenerale="date_generale",
+        $servername = "localhost",
+        $username = "root",
+        $password = ""
+    )
+    {
+      $this->dbname = $dbname;
+      $this->tablename = $tablename;
+      $this->servername = $servername;
+      $this->username = $username;
+      $this->password = $password;
+      $this->tablename2 = $tablename2;
+	  $this->tabledatepersonale=$tabledatepersonale;
+	  $this->tabledategenerale=$tabledategenerale;
+      // create connection
+        $this->con = mysqli_connect($servername, $username, $password);
+
+        // Check connection
+        if (!$this->con){
+            die("Connection failed : " . mysqli_connect_error());
+        }
+
+        // query
+        $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+
+        // execute query
+        if(mysqli_query($this->con, $sql)){
+
+            $this->con = mysqli_connect($servername, $username, $password, $dbname);
+
+            // sql to create new table
+            $sql = " CREATE TABLE IF NOT EXISTS $tablename
+                            (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                             Nume VARCHAR (50) NOT NULL,
+							 Facultatea VARCHAR (50) NOT NULL,
+							 Adresa VARCHAR (50) NOT NULL,
+							 Localitatea VARCHAR (50) NOT NULL,
+							 Judet VARCHAR (50) NOT NULL
+                            );";
+
+            if (!mysqli_query($this->con, $sql)){
+                echo "Error creating table : " . mysqli_error($this->con);
+            }
+			
+			
+
+        }else{
+            return false;
+        }
+    }
+
+    // get product from the database
+    public function getData($id,$etaj){
+        $sql = "SELECT SUM($this->tablename2.Locuri_ocupate) AS 'SUMA' ,SUM($this->tablename2.Locuri_max) AS 'SUMA1', $this->tablename2.Etaj    FROM $this->tablename2 INNER JOIN $this->tablename ON $this->tablename.ID_Camin=$this->tablename2.ID_Camin  WHERE $this->tablename2.ID_Camin=$id AND $this->tablename2.Etaj=$etaj";
+        
+        $result = mysqli_query($this->con, $sql);
+		 
+        
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+	public function getDataCamera($nrcamera,$id){
+        $id--;
+        
+        //$sql = "SELECT GROUP_CONCAT( CONCAT(CONCAT($this->tabledategenerale.Nume,' '),$this->tabledategenerale.Prenume) SEPARATOR ',') as 'Studenti',$this->tablename2.Locuri_max from $this->tabledatepersonale INNER JOIN $this->tabledategenerale ON $this->tabledatepersonale.ID_Student=$this->tabledategenerale.ID_Student INNER JOIN $this->tablename2 ON $this->tabledatepersonale.Nr_Camera=$this->tablename2.Nr_camera WHERE $this->tablename2.Nr_camera=$nrcamera AND $this->tablename2.ID_Camin=$id ";
+        $sql = "SELECT Nume,Prenume FROM date_personale INNER JOIN date_generale on date_personale.ID_Student=date_generale.ID_Student WHERE Nr_camera=$nrcamera AND NR_Camin=$id";
+        $result = mysqli_query($this->con, $sql);
+        
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+	public function getDataLocuriMaxime($nrcamera,$id){
+        $sql = "select Locuri_max from $this->tablename2 where ID_Camin=$id and Nr_camera=$nrcamera ";
+        
+        $result = mysqli_query($this->con, $sql);
+		 
+        
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+}
+
+
+
+
+
+
